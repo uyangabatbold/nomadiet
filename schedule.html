@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Цаг захиалах — Nomadiet</title>
+  <meta name="description" content="Клиник хоол зүйн болон ерөнхий хоол зүйн зөвлөгөөнд цаг захиална уу." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231c2e42'/%3E%3Ctext x='32' y='42' font-size='30' font-family='Georgia,serif' fill='%23f4ead9' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-frame">
+    <div class="site-card">
+
+      <!-- NAV -->
+      <header class="nav">
+        <a href="index.html" class="nav__logo">Nomadiet</a>
+        <nav class="nav__links">
+          <a href="index.html">Нүүр</a>
+          <a href="about.html">Эмчийн тухай</a>
+          <a href="schedule.html" aria-current="page">Цаг захиалах</a>
+        </nav>
+        <div class="nav__right">
+          <a href="schedule.html" class="btn btn-primary">Цаг захиалах</a>
+          <button class="nav__toggle" aria-label="Цэс нээх" id="navToggle"><span></span></button>
+        </div>
+      </header>
+      <nav class="nav__mobile" id="navMobile">
+        <a href="index.html">Нүүр</a>
+        <a href="about.html">Эмчийн тухай</a>
+        <a href="schedule.html">Цаг захиалах</a>
+      </nav>
+
+      <!-- HEADER -->
+      <section style="padding-bottom:0;">
+        <div class="section-head" style="margin-bottom:36px;">
+          <span class="eyebrow">Цаг захиалга</span>
+          <h1 style="font-size:2.2rem;">Танд тохирсон зөвлөгөөгөө сонгоно уу</h1>
+          <p>Доорх хоёр зөвлөгөөний төрлөөс сонгож, мэдээллээ бөглөн илгээнэ үү. Бид ажлын 1–2 өдрийн дотор
+             тантай холбогдож, цагийг баталгаажуулна.</p>
+        </div>
+      </section>
+
+      <!-- FORM -->
+      <section style="padding-top:0;">
+        <form id="bookingForm">
+          <div class="consult-options">
+            <label class="consult-option" id="optionCancer">
+              <input type="radio" name="consultType" value="Клиник хоол зүйн зөвлөгөө (хорт хавдартай өвчтөнд)" required />
+              <span class="consult-option__tag">Клиник</span>
+              <h3>Клиник хоол зүйн зөвлөгөө</h3>
+              <p>Хорт хавдартай өвчтөн болон хавдраас аман мэндээ хамгаалж буй хүмүүст зориулсан хооллолтын дэмжлэг.</p>
+              <span class="consult-option__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+            </label>
+            <label class="consult-option" id="optionGeneral">
+              <input type="radio" name="consultType" value="Ерөнхий хоол зүй / Илүүдэл жингийн зөвлөгөө" required />
+              <span class="consult-option__tag">Ерөнхий</span>
+              <h3>Ерөнхий хоол зүй, илүүдэл жин</h3>
+              <p>Жин хянах, зөв хооллох дадал бий болгох, эрүүл амьдралын хэв маягт шилжихэд чиглэсэн зөвлөгөө.</p>
+              <span class="consult-option__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+            </label>
+          </div>
+
+          <div class="booking-form">
+            <div class="selected-summary" id="selectedSummary"></div>
+
+            <div class="form-row form-row--split">
+              <div>
+                <label for="fullName">Овог, нэр</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Жишээ: Бат-Эрдэнэ Дорж" />
+              </div>
+              <div>
+                <label for="phone">Утасны дугаар</label>
+                <input type="tel" id="phone" name="phone" required placeholder="99XX XXXX" />
+              </div>
+            </div>
+
+            <div class="form-row form-row--split">
+              <div>
+                <label for="email">Имэйл хаяг</label>
+                <input type="email" id="email" name="email" required placeholder="jishee@gmail.com" />
+              </div>
+              <div>
+                <label for="preferredDate">Хүссэн огноо</label>
+                <input type="date" id="preferredDate" name="preferredDate" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="preferredTime">Хүссэн цагийн хэсэг</label>
+                <select id="preferredTime" name="preferredTime" required>
+                  <option value="">Сонгоно уу</option>
+                  <option value="Өглөө 09:00–12:00">Өглөө 09:00–12:00</option>
+                  <option value="Өдөр 12:00–15:00">Өдөр 12:00–15:00</option>
+                  <option value="Орой 15:00–18:00">Орой 15:00–18:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="message">Нэмэлт мэдээлэл (заавал биш)</label>
+                <textarea id="message" name="message" placeholder="Асуух зүйл, эрүүл мэндийн товч мэдээллээ бичнэ үү..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Хүсэлт илгээх</button>
+            <p class="form-note">Илгээснээр бид таны мэдээллийг зөвхөн цаг захиалгын зорилгоор ашиглана.</p>
+          </div>
+
+          <div class="confirmation" id="confirmation">
+            <div class="confirmation__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h2>Хүсэлт хүлээн авлаа!</h2>
+            <p id="confirmationText">Баярлалаа. Бид тантай удахгүй холбогдож, цагийг баталгаажуулна.</p>
+            <a href="index.html" class="btn btn-outline">Нүүр хуудас руу буцах</a>
+          </div>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__grid">
+          <div>
+            <h4>Nomadiet</h4>
+            <p>Клиникийн болон ерөнхий хоол зүйн мэргэшсэн зөвлөгөө үзүүлдэг үйлчилгээ.</p>
+          </div>
+          <div>
+            <h4>Холбоос</h4>
+            <ul>
+              <li><a href="index.html">Нүүр</a></li>
+              <li><a href="about.html">Эмчийн тухай</a></li>
+              <li><a href="schedule.html">Цаг захиалах</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Холбоо барих</h4>
+            <ul>
+              <li>+976 9911 2233</li>
+              <li>hello@nomadiet.mn</li>
+              <li>Улаанбаатар хот, Монгол</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Nomadiet. Бүх эрх хуулиар хамгаалагдсан.</span>
+          <span>Хоол зүйн мэргэжлийн зөвлөгөө</span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

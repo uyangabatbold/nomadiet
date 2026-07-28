@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomadiet — Хувийн хооллолт-эмчилгээний зөвлөгөө</title>
+  <meta name="description" content="Nomadiet нь клиникийн болон ерөнхий хоол зүйн мэргэшсэн зөвлөгөөгөөр таны эрүүл мэндийг дэмжинэ." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231c2e42'/%3E%3Ctext x='32' y='42' font-size='30' font-family='Georgia,serif' fill='%23f4ead9' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-frame">
+    <div class="site-card">
+
+      <!-- NAV -->
+      <header class="nav">
+        <a href="index.html" class="nav__logo">Nomadiet</a>
+        <nav class="nav__links">
+          <a href="index.html" aria-current="page">Нүүр</a>
+          <a href="about.html">Эмчийн тухай</a>
+          <a href="schedule.html">Цаг захиалах</a>
+        </nav>
+        <div class="nav__right">
+          <a href="schedule.html" class="btn btn-primary">Цаг захиалах</a>
+          <button class="nav__toggle" aria-label="Цэс нээх" id="navToggle"><span></span></button>
+        </div>
+      </header>
+      <nav class="nav__mobile" id="navMobile">
+        <a href="index.html">Нүүр</a>
+        <a href="about.html">Эмчийн тухай</a>
+        <a href="schedule.html">Цаг захиалах</a>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Nomadiet · Хоол зүйн мэргэжлийн зөвлөгөө</span>
+          <h1 class="hero__headline">Зөв хооллолт,<br />эрүүл ирээдүйн<br />эхлэл</h1>
+          <p>
+            Nomadiet нь эмнэлзүйн нотолгоонд суурилсан хоол зүйн зөвлөгөөгөөр таны эрүүл мэндийг дэмждэг.
+            Хорт хавдартай өвчтөн болон илүүдэл жинтэй хүмүүст зориулсан, хувь хүнд тохируулсан арга барилаар ажилладаг.
+          </p>
+          <div class="hero__actions">
+            <a href="schedule.html" class="btn btn-primary">Цаг захиалах</a>
+            <a href="about.html" class="btn btn-outline">Эмчийн тухай</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <div class="hero__ring">
+            <img src="assets/img/doctor-hero.png" alt="Оюундарь Амарбат, диетологич" />
+          </div>
+          <div class="floating-card floating-card--top">
+            <div class="avatar-stack"><span></span><span></span><span></span></div>
+            <div>
+              <strong>MSc, UCL</strong>
+              Клиник хоол зүй
+            </div>
+          </div>
+          <div class="floating-card floating-card--bottom">
+            <div>
+              <strong>Анхны уулзалт</strong>
+              Цаг захиалах боломжтой
+            </div>
+            <a href="schedule.html" class="btn btn-terracotta" style="padding:10px 18px;">Захиалах</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="section--tint">
+        <div class="stats">
+          <div class="stat">
+            <h3>2024</h3>
+            <p>Оноос хойш Үндэсний Хорт Хавдрын Төвд диетологичоор ажиллаж байна</p>
+          </div>
+          <div class="stat">
+            <h3>UCL</h3>
+            <p>Клиник ба нийгмийн эрүүл мэндийн хоол зүйн магистр</p>
+          </div>
+          <div class="stat">
+            <h3>ESPEN</h3>
+            <p>Европын Клиник Хоол Зүйн Нийгэмлэгийн залуу гишүүн</p>
+          </div>
+          <div class="stat">
+            <h3>MSPEN</h3>
+            <p>Монголын Парентерал, Энтерал Тэжээллэгийн Нийгэмлэгийг үүсгэн байгуулагч</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section>
+        <div class="section-head">
+          <h2>Бид юунд тусалж чадах вэ?</h2>
+          <p>Хувь хүн бүрийн эрүүл мэндийн нөхцөл байдалд тохирсон, эрдэм шинжилгээнд суурилсан хоёр үндсэн үйлчилгээ.</p>
+        </div>
+        <div class="card-grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-9C1 8 2 4 6 4c2 0 4 1.5 6 4.5C14 5.5 16 4 18 4c4 0 5 4 3.5 8-2.5 4.65-9.5 9-9.5 9z"/></svg>
+            </div>
+            <h3>Клиник хоол зүйн зөвлөгөө</h3>
+            <p>Хорт хавдартай өвчтөн болон хавдраас аман мэндээ хамгаалж буй хүмүүст зориулсан, эмнэлзүйн нотолгоонд суурилсан хооллолтын төлөвлөгөө, парентерал ба энтерал тэжээллэгийн дэмжлэг.</p>
+            <a href="schedule.html" class="btn btn-outline" style="margin-top:10px;">Дэлгэрэнгүй</a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </div>
+            <h3>Ерөнхий хоол зүй, илүүдэл жин</h3>
+            <p>Жингээ хянах, зөв хооллох дадал бий болгох, эрүүл амьдралын хэв маягт аажмаар шилжихэд чиглэсэн хувь хүнд тохирсон зөвлөгөө.</p>
+            <a href="schedule.html" class="btn btn-outline" style="margin-top:10px;">Дэлгэрэнгүй</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION / SPLIT -->
+      <section class="section--tint">
+        <div class="split">
+          <img src="assets/img/doctor-about.png" alt="Оюундарь Амарбат ажил дээрээ" />
+          <div>
+            <span class="eyebrow">Эрхэм зорилго</span>
+            <h2>Эрдэм шинжилгээ, өрөвдөх сэтгэлээр хооллолтод хандах</h2>
+            <p>
+              Nomadiet-ийг үндэслэгч Оюундарь Амарбат нь Монгол Улсын Үндэсний Хорт Хавдрын Судалгаа, Эмчилгээний
+              Төвд бүтэн цагаар диетологичоор ажилладаг бөгөөд Монголын анхны үндэсний клиник хоол зүйн
+              удирдамжийг боловсруулахад тэргүүлж оролцсон.
+            </p>
+            <p>
+              Түүний зорилго бол эмнэлзүйн нотолгоонд суурилсан хоол зүйн зөвлөгөөг хүн бүрт хүртээмжтэй,
+              ойлгомжтой байдлаар хүргэх явдал юм.
+            </p>
+            <a href="about.html" class="btn btn-outline">Эмчийн тухай дэлгэрэнгүй</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="cta-band">
+        <h2>Эрүүл мэндийн замналаа өнөөдрөөс эхлүүлье</h2>
+        <p>Танд тохирсон цагийг сонгож, анхны зөвлөгөөгөө захиална уу.</p>
+        <a href="schedule.html" class="btn btn-terracotta">Цаг захиалах</a>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__grid">
+          <div>
+            <h4>Nomadiet</h4>
+            <p>Клиникийн болон ерөнхий хоол зүйн мэргэшсэн зөвлөгөө үзүүлдэг үйлчилгээ.</p>
+          </div>
+          <div>
+            <h4>Холбоос</h4>
+            <ul>
+              <li><a href="index.html">Нүүр</a></li>
+              <li><a href="about.html">Эмчийн тухай</a></li>
+              <li><a href="schedule.html">Цаг захиалах</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Холбоо барих</h4>
+            <!-- placeholder contact details — swap for the real clinic phone/email/address -->
+            <ul>
+              <li>+976 9911 2233</li>
+              <li>hello@nomadiet.mn</li>
+              <li>Улаанбаатар хот, Монгол</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Nomadiet. Бүх эрх хуулиар хамгаалагдсан.</span>
+          <span>Хоол зүйн мэргэжлийн зөвлөгөө</span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
