@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 </head>
 <body>
   <div class="page-frame">
@@ -39,92 +40,35 @@
         <div class="section-head" style="margin-bottom:36px;">
           <span class="eyebrow">Цаг захиалга</span>
           <h1 style="font-size:2.2rem;">Танд тохирсон зөвлөгөөгөө сонгоно уу</h1>
-          <p>Доорх хоёр зөвлөгөөний төрлөөс сонгож, мэдээллээ бөглөн илгээнэ үү. Бид ажлын 1–2 өдрийн дотор
-             тантай холбогдож, цагийг баталгаажуулна.</p>
+          <p>Nomadiet хоёр төрлийн зөвлөгөө үзүүлдэг. Доорх хуанлиас өөрт тохирох цагийг сонгож захиална уу —
+             баталгаажуулах имэйл шууд очно.</p>
         </div>
       </section>
 
-      <!-- FORM -->
+      <!-- CONSULT TYPES -->
       <section style="padding-top:0;">
-        <form id="bookingForm">
-          <div class="consult-options">
-            <label class="consult-option" id="optionCancer">
-              <input type="radio" name="consultType" value="Клиник хоол зүйн зөвлөгөө (хорт хавдартай өвчтөнд)" required />
-              <span class="consult-option__tag">Клиник</span>
-              <h3>Клиник хоол зүйн зөвлөгөө</h3>
-              <p>Хорт хавдартай өвчтөн болон хавдраас аман мэндээ хамгаалж буй хүмүүст зориулсан хооллолтын дэмжлэг.</p>
-              <span class="consult-option__check">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-            </label>
-            <label class="consult-option" id="optionGeneral">
-              <input type="radio" name="consultType" value="Ерөнхий хоол зүй / Илүүдэл жингийн зөвлөгөө" required />
-              <span class="consult-option__tag">Ерөнхий</span>
-              <h3>Ерөнхий хоол зүй, илүүдэл жин</h3>
-              <p>Жин хянах, зөв хооллох дадал бий болгох, эрүүл амьдралын хэв маягт шилжихэд чиглэсэн зөвлөгөө.</p>
-              <span class="consult-option__check">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-            </label>
+        <div class="consult-options">
+          <div class="consult-option consult-option--static">
+            <span class="consult-option__tag">Клиник</span>
+            <h3>Клиник хоол зүйн зөвлөгөө</h3>
+            <p>Хорт хавдартай өвчтөн болон хавдраас аман мэндээ хамгаалж буй хүмүүст зориулсан хооллолтын дэмжлэг.</p>
           </div>
-
-          <div class="booking-form">
-            <div class="selected-summary" id="selectedSummary"></div>
-
-            <div class="form-row form-row--split">
-              <div>
-                <label for="fullName">Овог, нэр</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Жишээ: Бат-Эрдэнэ Дорж" />
-              </div>
-              <div>
-                <label for="phone">Утасны дугаар</label>
-                <input type="tel" id="phone" name="phone" required placeholder="99XX XXXX" />
-              </div>
-            </div>
-
-            <div class="form-row form-row--split">
-              <div>
-                <label for="email">Имэйл хаяг</label>
-                <input type="email" id="email" name="email" required placeholder="jishee@gmail.com" />
-              </div>
-              <div>
-                <label for="preferredDate">Хүссэн огноо</label>
-                <input type="date" id="preferredDate" name="preferredDate" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label for="preferredTime">Хүссэн цагийн хэсэг</label>
-                <select id="preferredTime" name="preferredTime" required>
-                  <option value="">Сонгоно уу</option>
-                  <option value="Өглөө 09:00–12:00">Өглөө 09:00–12:00</option>
-                  <option value="Өдөр 12:00–15:00">Өдөр 12:00–15:00</option>
-                  <option value="Орой 15:00–18:00">Орой 15:00–18:00</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label for="message">Нэмэлт мэдээлэл (заавал биш)</label>
-                <textarea id="message" name="message" placeholder="Асуух зүйл, эрүүл мэндийн товч мэдээллээ бичнэ үү..."></textarea>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Хүсэлт илгээх</button>
-            <p class="form-note">Илгээснээр бид таны мэдээллийг зөвхөн цаг захиалгын зорилгоор ашиглана.</p>
+          <div class="consult-option consult-option--static">
+            <span class="consult-option__tag">Ерөнхий</span>
+            <h3>Ерөнхий хоол зүй, илүүдэл жин</h3>
+            <p>Жин хянах, зөв хооллох дадал бий болгох, эрүүл амьдралын хэв маягт шилжихэд чиглэсэн зөвлөгөө.</p>
           </div>
+        </div>
 
-          <div class="confirmation" id="confirmation">
-            <div class="confirmation__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h2>Хүсэлт хүлээн авлаа!</h2>
-            <p id="confirmationText">Баярлалаа. Бид тантай удахгүй холбогдож, цагийг баталгаажуулна.</p>
-            <a href="index.html" class="btn btn-outline">Нүүр хуудас руу буцах</a>
-          </div>
-        </form>
+        <!--
+          Calendly setup: replace data-url below with your real scheduling
+          link once your Calendly account and event are created
+          (e.g. https://calendly.com/your-name/consultation). In Calendly's
+          event setup you can add a custom question asking which consult
+          type the visitor wants, since both cards above point to this
+          same calendar.
+        -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/your-nomadiet-link/consultation" style="min-width:280px;height:700px;"></div>
       </section>
 
       <!-- FOOTER -->
@@ -160,5 +104,6 @@
     </div>
   </div>
   <script src="assets/js/main.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
