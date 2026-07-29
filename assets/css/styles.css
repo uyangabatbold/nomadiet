@@ -1,21 +1,21 @@
 /* ============================================================
    Nomadiet — shared styles
    Fonts: Playfair Display (display/serif) + Inter (body/sans)
-   Palette: warm cream + deep navy + terracotta accent
+   Palette: light blue + deep blue + terracotta accent
    ============================================================ */
 
 :root {
-  --cream: #f4ead9;
-  --cream-deep: #ece0cb;
-  --paper: #fffdf9;
-  --navy: #1c2e42;
-  --navy-deep: #142333;
-  --ink: #23303f;
-  --ink-soft: #5a6472;
+  --cream: #e7f1f8;
+  --cream-deep: #d2e5f2;
+  --paper: #fbfdff;
+  --navy: #0d214f;
+  --navy-deep: #081733;
+  --ink: #223349;
+  --ink-soft: #52697f;
   --terracotta: #c26a4b;
   --terracotta-deep: #a8543a;
   --sage: #7c9070;
-  --line: #e3d5bd;
+  --line: #c7dced;
 
   --font-display: "Playfair Display", "Noto Serif", Georgia, serif;
   --font-body: "Inter", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -24,8 +24,8 @@
   --radius-md: 18px;
   --radius-sm: 10px;
 
-  --shadow-soft: 0 20px 60px -20px rgba(28, 46, 66, 0.25);
-  --shadow-card: 0 12px 30px -12px rgba(28, 46, 66, 0.18);
+  --shadow-soft: 0 20px 60px -20px rgba(13, 33, 79, 0.25);
+  --shadow-card: 0 12px 30px -12px rgba(13, 33, 79, 0.18);
 
   --container-w: 1180px;
 }
@@ -502,6 +502,10 @@ ul {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 64px;
   }
+
+  .need-band__grid--media-left {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
 }
 
 .need-band h2 {
@@ -555,7 +559,7 @@ ul {
 
 .need-band__frame {
   position: absolute;
-  inset: 22px -22px -22px 22px;
+  inset: 22px 22px -22px -22px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   z-index: 0;
@@ -603,6 +607,74 @@ section {
 
 .section--tint {
   background: var(--cream);
+}
+
+/* ---------- stat panel (hero figure + divider + row) ---------- */
+
+.stat-panel {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.stat-panel__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+
+.stat-panel__figure {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 4.2rem;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+  .stat-panel__figure {
+    font-size: 5.4rem;
+  }
+}
+
+.stat-panel__desc {
+  font-size: 1.05rem;
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.stat-panel__divider {
+  height: 1px;
+  background: var(--line);
+  margin-bottom: 32px;
+}
+
+.stat-panel__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 640px) {
+  .stat-panel__row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-panel__item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.stat-panel__item p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin: 0;
 }
 
 /* ---------- stats ---------- */
