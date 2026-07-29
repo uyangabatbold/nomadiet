@@ -1,13 +1,13 @@
 /* ============================================================
    Nomadiet — shared styles
    Fonts: Playfair Display (display/serif) + Inter (body/sans)
-   Palette: light blue + deep blue + terracotta accent
+   Palette: warm cream + deep blue + terracotta accent
    ============================================================ */
 
 :root {
-  --cream: #e7f1f8;
-  --cream-deep: #d2e5f2;
-  --paper: #fbfdff;
+  --cream: #f4ead9;
+  --cream-deep: #ece0cb;
+  --paper: #fffdf9;
   --navy: #0d214f;
   --navy-deep: #081733;
   --ink: #223349;
@@ -15,7 +15,7 @@
   --terracotta: #c26a4b;
   --terracotta-deep: #a8543a;
   --sage: #7c9070;
-  --line: #c7dced;
+  --line: #e3d5bd;
 
   --font-display: "Playfair Display", "Noto Serif", Georgia, serif;
   --font-body: "Inter", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
