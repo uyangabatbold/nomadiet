@@ -640,6 +640,11 @@ section {
   margin-bottom: 6px;
 }
 
+.stat-panel__item-title {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
 .stat-panel__item p {
   font-size: 0.8rem;
   text-transform: uppercase;
