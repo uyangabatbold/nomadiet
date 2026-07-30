@@ -946,11 +946,15 @@ section {
   margin-bottom: 0;
 }
 
-.calendly-inline-widget {
+.booking-embed {
   max-width: var(--container-w);
   margin: 0 auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
+}
+
+.booking-embed iframe {
+  display: block;
 }
 
 /* ---------- utility ---------- */

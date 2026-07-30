@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=2" />
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 </head>
 <body>
   <div class="page-frame">
@@ -61,14 +60,15 @@
         </div>
 
         <!--
-          Calendly setup: replace data-url below with your real scheduling
-          link once your Calendly account and event are created
-          (e.g. https://calendly.com/your-name/consultation). In Calendly's
-          event setup you can add a custom question asking which consult
-          type the visitor wants, since both cards above point to this
-          same calendar.
+          Google Calendar appointment schedule. Uses the resolved
+          calendar.google.com URL rather than the calendar.app.google
+          short link, since the short link's redirect page blocks being
+          framed. Both consult-type cards above point at this same
+          booking page.
         -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/nomaddiet/meet-with-me" style="min-width:280px;height:700px;"></div>
+        <div class="booking-embed">
+          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1UMqjMpZanLmJAoB09vYMJHP8dksV6rjl46Qw2rwxDkOOWJoRHPXYCxO1t1K3xmD9lj-me0Rjt?gv=true" style="border: 0" width="100%" height="700" frameborder="0"></iframe>
+        </div>
       </section>
 
       <!-- FOOTER -->
@@ -104,6 +104,5 @@
     </div>
   </div>
   <script src="assets/js/main.js"></script>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
