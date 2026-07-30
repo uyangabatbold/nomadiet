@@ -957,6 +957,42 @@ section {
   display: block;
 }
 
+.form-callout {
+  max-width: var(--container-w);
+  margin: 28px auto 0;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+@media (min-width: 700px) {
+  .form-callout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.form-callout h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.form-callout p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form-callout .btn {
+  flex: none;
+}
+
 /* ---------- utility ---------- */
 
 .text-center {
