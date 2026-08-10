@@ -965,14 +965,57 @@ section {
 
 .consult-option {
   position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
   padding: 30px 26px;
   background: var(--paper);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.consult-option--static {
-  cursor: default;
+.consult-option:hover {
+  border-color: var(--terracotta);
+}
+
+.consult-option.is-selected {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(194, 106, 75, 0.12);
+}
+
+.consult-option__check {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.consult-option.is-selected .consult-option__check {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.consult-option__check svg {
+  opacity: 0;
+  width: 14px;
+  height: 14px;
+  stroke: white;
+  transition: opacity 0.2s ease;
+}
+
+.consult-option.is-selected .consult-option__check svg {
+  opacity: 1;
 }
 
 .consult-option__tag {

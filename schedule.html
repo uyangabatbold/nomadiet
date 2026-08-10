@@ -47,27 +47,31 @@
       <!-- CONSULT TYPES -->
       <section style="padding-top:0;">
         <div class="consult-options">
-          <div class="consult-option consult-option--static">
+          <button type="button" class="consult-option is-selected" data-cal-url="https://cal.com/uyanga-batbold-a5wf7p/30min">
             <span class="consult-option__tag">Клиник</span>
             <h3>Клиник хоол зүйн зөвлөгөө</h3>
             <p>Хорт хавдартай өвчтөнгүүдэд зориулсан эмнэлзүйн нотолгоонд суурилсан хооллолтын болон гуурс, судсан шим тэжээлийн зөвлөгөө.</p>
-          </div>
-          <div class="consult-option consult-option--static">
+            <span class="consult-option__check">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+          </button>
+          <button type="button" class="consult-option" data-cal-url="https://cal.com/uyanga-batbold-a5wf7p/ерөнхии-хоол-зүи-илүүдэл-жин">
             <span class="consult-option__tag">Ерөнхий</span>
             <h3>Ерөнхий хоол зүй, илүүдэл жин</h3>
             <p>Жин хянах, зөв хооллох дадал бий болгох, эрүүл амьдралын хэв маягт шилжихэд чиглэсэн зөвлөгөө.</p>
-          </div>
+            <span class="consult-option__check">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+          </button>
         </div>
 
         <!--
-          Google Calendar appointment schedule. Uses the resolved
-          calendar.google.com URL rather than the calendar.app.google
-          short link, since the short link's redirect page blocks being
-          framed. Both consult-type cards above point at this same
-          booking page.
+          Cal.com embeds — one per consult type. Clicking a card above
+          swaps the iframe's src (see assets/js/main.js) instead of
+          loading both at once.
         -->
         <div class="booking-embed">
-          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1UMqjMpZanLmJAoB09vYMJHP8dksV6rjl46Qw2rwxDkOOWJoRHPXYCxO1t1K3xmD9lj-me0Rjt?gv=true&hl=mn" style="border: 0" width="100%" height="700" frameborder="0"></iframe>
+          <iframe id="calEmbed" src="https://cal.com/uyanga-batbold-a5wf7p/30min" style="border: 0" width="100%" height="700" frameborder="0"></iframe>
         </div>
 
         <div class="form-callout">
