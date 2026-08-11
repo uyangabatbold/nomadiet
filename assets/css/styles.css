@@ -195,6 +195,8 @@ ul {
 
 .nav__toggle {
   display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
   border: 1px solid var(--line);
   background: none;
   border-radius: 999px;
