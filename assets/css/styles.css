@@ -747,6 +747,12 @@ section {
   }
 }
 
+@media (min-width: 980px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .service-card {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -962,6 +968,12 @@ section {
 @media (min-width: 700px) {
   .consult-options {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .consult-options {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
