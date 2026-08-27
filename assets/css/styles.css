@@ -749,7 +749,7 @@ section {
 
 @media (min-width: 980px) {
   .card-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -973,7 +973,7 @@ section {
 
 @media (min-width: 980px) {
   .consult-options {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
