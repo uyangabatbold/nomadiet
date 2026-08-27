@@ -24,3 +24,35 @@
     });
   });
 })();
+
+// Scheduling page: "Асуулга бөглөх" opens a dialog listing the 4 questionnaires
+(function () {
+  var trigger = document.getElementById("formMenuTrigger");
+  var dialog = document.getElementById("formDialog");
+  if (!trigger || !dialog) return;
+
+  var closers = dialog.querySelectorAll("[data-dialog-close]");
+  var lastFocused = null;
+
+  function openDialog() {
+    lastFocused = document.activeElement;
+    dialog.hidden = false;
+    document.body.style.overflow = "hidden";
+    var firstItem = dialog.querySelector(".form-dialog__item");
+    if (firstItem) firstItem.focus();
+  }
+
+  function closeDialog() {
+    dialog.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+  }
+
+  trigger.addEventListener("click", openDialog);
+  closers.forEach(function (el) {
+    el.addEventListener("click", closeDialog);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !dialog.hidden) closeDialog();
+  });
+})();

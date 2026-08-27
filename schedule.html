@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
 </head>
 <body>
   <div class="page-frame">
@@ -87,7 +87,36 @@
             <h3>Цаг захиалсны дараа</h3>
             <p>Зөвлөгөөнд бэлтгэхийн тулд дараах асуулгыг бөглөнө үү. Энэ нь эмчид таны эрүүл мэндийн товч мэдээлэлтэй урьдчилан танилцах боломжийг олгоно.</p>
           </div>
-          <a href="https://forms.gle/D1AsD2n3Jow73hu46" target="_blank" rel="noopener" class="btn btn-terracotta">Асуулга бөглөх</a>
+          <button type="button" class="btn btn-terracotta" id="formMenuTrigger" aria-haspopup="dialog" aria-controls="formDialog">Асуулга бөглөх</button>
+        </div>
+
+        <div class="form-dialog" id="formDialog" hidden>
+          <div class="form-dialog__backdrop" data-dialog-close></div>
+          <div class="form-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="formDialogTitle">
+            <button type="button" class="form-dialog__close" data-dialog-close aria-label="Хаах">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+            <h3 id="formDialogTitle">Асуулгаа сонгоно уу</h3>
+            <p>Та авах гэж буй зөвлөгөөнд тохирох асуулгыг сонгож бөглөнө үү.</p>
+            <div class="form-dialog__list">
+              <a href="https://forms.gle/Qy2oPE3bpefAtF6k8" target="_blank" rel="noopener" class="form-dialog__item">
+                <span>Хавдрын болон мэс заслын эмчилгээний үеийн зөвөлгөө</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+              <a href="https://forms.gle/EinqAsAzTyj9hRTq9" target="_blank" rel="noopener" class="form-dialog__item">
+                <span>Элэгний хатуурлын үеийн зөвөлгөө</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+              <a href="https://forms.gle/VFJSLZBudzmeQEMh9" target="_blank" rel="noopener" class="form-dialog__item">
+                <span>Чихрийн шижингийн үеийн зөвөлгөө</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+              <a href="https://forms.gle/GSgUEFQ9YHH7Ar4a8" target="_blank" rel="noopener" class="form-dialog__item">
+                <span>Жин хасах зорилготой өвчтөний зөвөлгөө</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

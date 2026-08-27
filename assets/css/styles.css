@@ -1101,6 +1101,126 @@ section {
   flex: none;
 }
 
+/* ---------- form dialog (questionnaire picker) ---------- */
+
+.form-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-dialog[hidden] {
+  display: none;
+}
+
+.form-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 23, 51, 0.55);
+}
+
+.form-dialog__panel {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  padding: 32px 28px 24px;
+  box-shadow: 0 30px 70px rgba(8, 23, 51, 0.35);
+}
+
+.form-dialog__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.form-dialog__close:hover,
+.form-dialog__close:focus-visible {
+  background: var(--cream);
+  color: var(--ink);
+  outline: none;
+}
+
+.form-dialog__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.form-dialog__panel h3 {
+  font-size: 1.3rem;
+  margin: 0 0 8px;
+  padding-right: 34px;
+}
+
+.form-dialog__panel > p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+}
+
+.form-dialog__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-dialog__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 14px;
+  border-radius: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.form-dialog__item + .form-dialog__item {
+  border-top: 1px solid var(--line);
+}
+
+.form-dialog__item svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--terracotta);
+  transition: transform 0.15s ease;
+}
+
+.form-dialog__item:hover,
+.form-dialog__item:focus-visible {
+  background: var(--cream);
+  color: var(--terracotta-deep);
+  outline: none;
+}
+
+.form-dialog__item:hover svg,
+.form-dialog__item:focus-visible svg {
+  transform: translateX(3px);
+}
+
 /* ---------- utility ---------- */
 
 .text-center {
